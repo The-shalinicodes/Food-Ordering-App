@@ -10,10 +10,15 @@ const Body=()=>{
       <div className="res-container">
         <RestaurantCard
           resName="Meghana Foods"
-          cuisine="Biryani, North Indian,Asian"/>
+          cuisine="Biryani, North Indian,Asian"
+          rating="4.4 stars"
+          deliveryTime="38 minutes"/>
+          
         <RestaurantCard
           resName="KFC"
-          cuisine="Burger, Fast Foods"/>
+          cuisine="Burger, Fast Foods"
+          rating="5.0 stars"
+          deliveryTime="30 minutes"/>
       </div>
     </div>
   );
