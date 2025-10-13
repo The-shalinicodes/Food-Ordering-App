@@ -27,3 +27,8 @@ import Component from "path";
 -Named Export/Import
 export const Component;
 import {Component} from "path";
+
+#React Hooks
+{normal JS utility function}
+-useState()
+-useEffect()
