@@ -2,10 +2,11 @@ import React from "react";
 import RestaurantCard from "./RestaurantCard";
 import resList from "../utils/data";
 import {useState,useEffect} from "react";
+import Shimmer from "./shimmer";
 
 const Body=()=>{
   //Local State variable-SuperPowerful Variable
-  const arr=useState(resList);
+  const arr=useState([]);
   const[listOfRestaurants,setListOfRestaurant]=arr;//array destructuring
   // const listOfRestaurants=arr[0];
   // const setListOfRestaurant=arr[1];
@@ -18,7 +19,12 @@ const Body=()=>{
     const data=await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.97&lng=77.59");
     const json=await data.json();
     console.log(json);
+    setListOfRestaurant(resList);
     
+  } 
+  
+  if(listOfRestaurants.length==0){
+    return <Shimmer/>;
   }
 
   return(
